@@ -1,10 +1,9 @@
 import { Component } from "react";
 
-class ButtonClick extends Component {
+class FormTry extends Component {
   constructor(props) {
     super(props);
   }
-
   render() {
     return (
       <div>
@@ -12,7 +11,7 @@ class ButtonClick extends Component {
           <input
             type="text"
             name="name"
-            value={this.state.newItem}
+            value={this.props.newItem}
             onChange={(e) => this.props.handleChange("newItem", e.target.value)}
           />
         </label>
@@ -21,12 +20,11 @@ class ButtonClick extends Component {
           value="submit"
           onClick={() => this.props.handleSubmit()}
         >
-          {" "}
-          Add{" "}
+          Add
         </button>
       </div>
     );
   }
 }
 
-export default ButtonClick;
+export default FormTry;
